@@ -1,12 +1,13 @@
 # .bash_profile
 
 ide() {
+  cd ~
 
-  PROJECTS_DIRECTORY="~/projects"
+  PROJECTS_DIRECTORY="$PWD/projects"
   DIRECTORY="$PROJECTS_DIRECTORY/$1" 
 
   PARAMETER_ERROR="Enter a directory under the $PROJECTS_DIRECTORY folder"
-  DIRECTORY_NONEXISTANT_ERROR="The directory $DIRECTORY does not exist."
+  DIRECTORY_NONEXISTENT_ERROR="The directory $DIRECTORY does not exist."
 
   if [ "$#" -ne 1 ]; then
     echo $PARAMETER_ERROR
@@ -17,7 +18,7 @@ ide() {
     cd $DIRECTORY
     ./ide
   else
-    echo $DIRECTORY_NONEXISTANT_ERROR
+    echo $DIRECTORY_NONEXISTENT_ERROR
 	fi
 }
 
