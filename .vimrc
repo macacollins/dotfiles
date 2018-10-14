@@ -37,10 +37,7 @@ set shiftwidth=4
 " On pressing tab, insert 4 spaces
 set expandtab
 
-
-" Set default leader to comma
-" This should be helpful for elm oracle stuff
-let mapleader = ','
-
 set showcmd
 set backspace=indent,eol,start
+
+set relativenumber
